@@ -1,0 +1,202 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body, html {
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+   
+}
+
+#root {
+    height: 100%;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px; /* Consistent padding */
+    display: flex;
+    justify-content: space-between; /* Space logo and links */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Consistent gap */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px; /* Add some padding around links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #f0f0f0; /* Slightly lighter color on hover */
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px; /* Adjust top padding for fixed navbar */
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Consistent padding */
+}
+
+
+/* Specific Section Styles */
+#Home {
+    background-color: #171d32;
+    color: white;
+    text-align: center;
+}
+
+#About {
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+#Service {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+#Project {
+    background-color: #444;
+    color: white;
+    text-align: center;
+}
+
+#Footer {
+    background-color: #465697;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+#Footer h1 {
+    font-size: 1.5rem;
+}
+
+#Footer h3 {
+    font-size: 1rem;
+}
+
+#Footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#Footer ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+/* Ensure all sections are spaced out properly */
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+section p {
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Limit paragraph width for larger screens */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Mobile-responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack navbar items */
+        align-items: flex-start; /* Align to the left */
+        padding: 10px; /* Reduced padding */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 10px; /* Add some space above the links */
+        gap: 10px;
+    }
+
+    nav a {
+        display: block; /* Make links take full width */
+        padding: 5px; /* Adjust link padding */
+    }
+    .main-container {
+        padding-top: 110px; /* Adjust top padding for stacked navbar */
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+        max-width: 90%; /* Make paragraph wider on smaller screens */
+    }
+
+    #Footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #Footer ul li {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+
+    #Footer ul li {
+        font-size: 0.9rem;
+    }
+
+    .main-container {
+        padding-top: 110px; /* Adjust top padding for stacked navbar */
+    }
+}
